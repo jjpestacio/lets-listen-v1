@@ -6,14 +6,15 @@ module.exports = {
 		color: '#ffffff',
 		display:'block',
 		fontSize: '1em',
-		height: '3.5vw',
+		height: '3.6vw',
 		// margin: '0 auto',
 		opacity: '0.8',
 		padding: '1vw',
 		width: '20vw',
+		verticalAlign: 'top',
 		':hover': {
 			opacity: '1'
-		}
+		},
 	},
 	container: {
 		alignSelf: 'center',
@@ -37,6 +38,7 @@ module.exports = {
 		// margin: '10px 0',
 		padding: '0.8vw',
 		width: '20vw',
+		verticalAlign: 'top',
 		':focus': {
 			backgroundColor: 'white',
 			color: '#525f59',
@@ -70,4 +72,7 @@ module.exports = {
 		position: 'relative',
 		width: '100%',
 	},
+	'@media (max-width: 20em)': {
+		backgroundColor: 'black'
+	}
 }

@@ -21797,10 +21797,10 @@
 	  };
 	}
 
-	var CompiledPatternsCache = {};
+	var CompiledPatternsCache = Object.create(null);
 
 	function compilePattern(pattern) {
-	  if (!(pattern in CompiledPatternsCache)) CompiledPatternsCache[pattern] = _compilePattern(pattern);
+	  if (!CompiledPatternsCache[pattern]) CompiledPatternsCache[pattern] = _compilePattern(pattern);
 
 	  return CompiledPatternsCache[pattern];
 	}
@@ -24042,6 +24042,7 @@
 	}
 
 	//export default useRoutes
+
 	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
@@ -28451,6 +28452,10 @@
 
 	var _reactRedux = __webpack_require__(236);
 
+	var _radium = __webpack_require__(314);
+
+	var _radium2 = _interopRequireDefault(_radium);
+
 	var _socket = __webpack_require__(262);
 
 	var _socket2 = _interopRequireDefault(_socket);
@@ -28500,7 +28505,7 @@
 				return dispatch((0, _actions.setDJ)(username));
 			}
 		};
-	}), _dec(_class = function (_Component) {
+	}), _dec(_class = (0, _radium2.default)(_class = function (_Component) {
 		_inherits(App, _Component);
 
 		function App(props) {
@@ -28569,13 +28574,17 @@
 				return _react2.default.createElement(
 					'div',
 					{ id: 'app' },
-					this.props.children && _react2.default.cloneElement(this.props.children, { socket: this.socket })
+					_react2.default.createElement(
+						_radium.StyleRoot,
+						null,
+						this.props.children && _react2.default.cloneElement(this.props.children, { socket: this.socket })
+					)
 				);
 			}
 		}]);
 
 		return App;
-	}(_react.Component)) || _class);
+	}(_react.Component)) || _class) || _class);
 	exports.default = App;
 
 /***/ },
@@ -40407,11 +40416,12 @@
 			color: '#ffffff',
 			display: 'block',
 			fontSize: '1em',
-			height: '3.5vw',
+			height: '3.6vw',
 			// margin: '0 auto',
 			opacity: '0.8',
 			padding: '1vw',
 			width: '20vw',
+			verticalAlign: 'top',
 			':hover': {
 				opacity: '1'
 			}
@@ -40437,6 +40447,7 @@
 			// margin: '10px 0',
 			padding: '0.8vw',
 			width: '20vw',
+			verticalAlign: 'top',
 			':focus': {
 				backgroundColor: 'white',
 				color: '#525f59'
@@ -40469,6 +40480,9 @@
 			margin: '0',
 			position: 'relative',
 			width: '100%'
+		},
+		'@media (max-width: 20em)': {
+			backgroundColor: 'black'
 		}
 	};
 
@@ -41207,6 +41221,7 @@
 		},
 		controller: {
 			display: 'block',
+			marginBottom: '1vw',
 			width: '28vw'
 		}
 	};
@@ -41380,8 +41395,10 @@
 			display: 'inline-block',
 			fontSize: '1em',
 			height: '3.4vw',
+			marginBottom: '1vw',
 			opacity: '0.8',
-			padding: '6px 12px',
+			padding: '1vw',
+			verticalAlign: 'top',
 			width: '8vw',
 			':hover': {
 				opacity: '1'
@@ -41393,9 +41410,10 @@
 			borderRadius: '4px 0 0 4px',
 			color: '#a2a2a2',
 			fontSize: '1em',
-			margin: '1vw 0',
-			padding: '6px',
+			height: '2.2vw',
+			padding: '0.6vw',
 			width: '20vw',
+			verticalAlign: 'top',
 			':focus': {
 				backgroundColor: 'white',
 				color: '#525f59'
@@ -51643,6 +51661,7 @@
 		},
 		controller: {
 			display: 'block',
+			marginBotttom: '1vw',
 			width: '28vw'
 		}
 	};
@@ -51807,9 +51826,11 @@
 			color: '#ffffff',
 			display: 'inline-block',
 			fontSize: '1em',
+			height: '3.4vw',
 			opacity: '0.8',
-			padding: '6px 12px',
+			padding: '1vw',
 			width: '8vw',
+			verticalAlign: 'top',
 			':hover': {
 				opacity: '1'
 			}
@@ -51820,9 +51841,10 @@
 			borderRadius: '4px 0 0 4px',
 			color: '#a2a2a2',
 			fontSize: '1em',
-			margin: '1vw 0',
-			padding: '6px',
+			height: '2.2vw',
+			padding: '0.6vw',
 			width: '20vw',
+			verticalAlign: 'top',
 			':focus': {
 				backgroundColor: 'white',
 				color: '#525f59'
@@ -51997,7 +52019,7 @@
 							'button',
 							{
 								onClick: this.createRoom,
-								style: _styles.button
+								style: [_styles.button, { margin: '0 0 1vw 0' }]
 							},
 							'Create a Room'
 						),

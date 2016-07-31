@@ -46,7 +46,7 @@ export default class JoinRoom extends Component {
 				<div className='joinRoom' style={container}>
 					<button 
 						onClick={this.createRoom}
-						style={button}
+						style={[button, { margin: '0 0 1vw 0' }]}
 						>Create a Room</button>
 					<InputForm
 						buttonStyle={[button, inlineButton]}

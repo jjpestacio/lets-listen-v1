@@ -7,8 +7,10 @@ module.exports = {
 		display:'inline-block',
 		fontSize: '1em',
 		height: '3.4vw',
+		marginBottom: '1vw',
 		opacity: '0.8',
-		padding: '6px 12px',
+		padding: '1vw',
+		verticalAlign: 'top',
 		width: '8vw',
 		':hover': {
 			opacity: '1'
@@ -20,9 +22,10 @@ module.exports = {
 		borderRadius: '4px 0 0 4px',
 		color: '#a2a2a2',
 		fontSize: '1em',
-		margin: '1vw 0',
-		padding: '6px',
+		height: '2.2vw',
+		padding: '0.6vw',
 		width: '20vw',
+		verticalAlign: 'top',
 		':focus': {
 			backgroundColor: 'white',
 			color: '#525f59',

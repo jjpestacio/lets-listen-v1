@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Radium, { StyleRoot } from 'radium'
 import io from 'socket.io-client'
 import SC from 'soundcloud'
 // import google from 'googleapis'
@@ -22,7 +23,7 @@ import {
 		setDJ: username => dispatch(setDJ(username))
 	})
 )
-
+@Radium
 export default class App extends Component {
 	constructor(props) {
 		super(props);
@@ -59,12 +60,14 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id='app'>
-				{ this.props.children 
-					&& React.cloneElement(
-						this.props.children,
-						{ socket: this.socket }
-					)
-				}
+				<StyleRoot>
+					{ this.props.children 
+						&& React.cloneElement(
+							this.props.children,
+							{ socket: this.socket }
+						)
+					}
+				</StyleRoot>
 			</div>
 		)
 	}
