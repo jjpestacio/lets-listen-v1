@@ -34,6 +34,14 @@ export default class Home extends Component {
 		this.getPlayer = this.getPlayer.bind(this);
 	}
 
+	componentDidMount() {
+		const { socket } = this.props;
+
+		setInterval(() => {
+			console.log('ping')
+		}, 53000);
+	}
+
 	getPlayer(current) {
 		const { DJ, socket, user } = this.props;
 

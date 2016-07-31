@@ -28546,6 +28546,10 @@
 				var setDJ = _props.setDJ;
 
 
+				setInterval(function () {
+					return console.log('ping');
+				}, 53000);
+
 				this.socket.on('addQueue', function (item) {
 					return addQueue(item);
 				});
@@ -40298,6 +40302,16 @@
 		}
 
 		_createClass(Home, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var socket = this.props.socket;
+
+
+				setInterval(function () {
+					console.log('ping');
+				}, 53000);
+			}
+		}, {
 			key: 'getPlayer',
 			value: function getPlayer(current) {
 				var _props = this.props;
