@@ -48,6 +48,10 @@ export default class App extends Component {
 			login, nextQueue, removeUser, setDJ 
 		} = this.props;
 
+		setInterval(() => {
+			this.socket.emit('ping')	
+		}, 50000);
+
 		this.socket.on('addQueue', item => addQueue(item));
 		this.socket.on('changedTime', time => changeTime(time));
 		this.socket.on('createdRoom', room => joinRoom(room));

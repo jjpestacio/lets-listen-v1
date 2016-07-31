@@ -93,6 +93,8 @@ io.on('connection', socket => {
 		socket.broadcast.to(room).emit('nextQueue');
 	}),
 
+	socket.on('ping', () => console.log('ping'));
+
 	socket.on('setDJ', ({ room, username }) => {
 		console.log('DJ is: ', username);
 		
