@@ -18,6 +18,7 @@ module.exports = {
 	},
 	controller: {
 		display: 'block',
+		margin: '1vw',
 		width: '28vw',
 	},
 }

@@ -35,7 +35,7 @@ export default class SCRequestForm extends Component {
 		const songFinal = { ...song, suggestedBy: user };
 
 		addQueue(songFinal);
-		socket.emit('addQueue', songFinal);
+		socket.emit('addQueue', { room, item: songFinal });
 		this.setState({ searchResults: [] });
 	}
 

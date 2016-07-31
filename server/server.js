@@ -69,6 +69,10 @@ io.on('connection', socket => {
 	socket.on('join room', roomId => {
 		console.log('Joined room ', roomId);
 		users[socket.id].room = roomId;
+
+		// Room does not exist yet
+		if (!states[roomId])
+			states[roomId] = { ...initialState, room: roomId };
 		
 		socket.join(roomId);
 	});
