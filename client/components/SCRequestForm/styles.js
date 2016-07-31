@@ -7,7 +7,7 @@ module.exports = {
 		display:'inline-block',
 		fontSize: '1em',
 		height: '3.4vw',
-		marginBottom: '1vw',
+		margin: '1vw 0',
 		opacity: '0.8',
 		padding: '1vw',
 		verticalAlign: 'top',
