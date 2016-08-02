@@ -4,10 +4,6 @@ Have you ever been in a situation where you're listening to music with friends? 
 
 Create a room and have your friends join. Then queue music to be played from either SoundCloud or YouTube!
 
-## Installation
-
-TODO: Describe the installation process
-
 ## Usage
 
 [Here's a live demo!](http://whosdjing.herokuapp.com/)
