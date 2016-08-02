@@ -3,10 +3,8 @@ import { connect } from 'react-redux'
 import Radium from 'radium'
 import SC from 'soundcloud'
 
-import { changeTime, nextQueue } from '../../actions'
+import { changeTime, nextQueue } from '../../../actions'
 import { button, buttons, controller } from './styles'
-
-import Song from '../Song'
 
 @connect(
 	state => ({

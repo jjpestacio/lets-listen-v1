@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import Radium from 'radium'
 
 import { button, input } from './styles'
-import { YT_VIDEO } from '../../constants'
-import { addQueue } from '../../actions'
+import { YT_VIDEO } from '../../../constants'
+import { addQueue } from '../../../actions'
 
 
-import InputForm from '../Forms'
+import InputForm from '../../Forms'
 import SearchResults from './SearchResults'
 
 @connect (

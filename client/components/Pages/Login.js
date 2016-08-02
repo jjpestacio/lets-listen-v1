@@ -42,7 +42,6 @@ export default class Login extends Component {
 
 	usernameTaken(username) {
 		const { users } = this.props;
-
 		return users.filter(name => name === username).length
 	}
 

@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import Radium from 'radium'
 import SC from 'soundcloud'
 
-import { SC_SONG } from '../../constants'
-import { addQueue } from '../../actions'
+import { SC_SONG } from '../../../constants'
+import { addQueue } from '../../../actions'
 import { button, input } from './styles'
 
-import InputForm from '../Forms'
+import InputForm from '../../Forms'
 import SearchResults from './SearchResults'
 
 @connect(
@@ -56,7 +56,8 @@ export default class SCRequestForm extends Component {
 	getSongs(queryString) {
 		this.setState({ searchResults: [] });
 		
-		if (!queryString) return;
+		if (!queryString) 
+			return;
 
 		SC.get('/tracks', { q: queryString })
 			.then( songs => this.getArtists(songs));
@@ -64,6 +65,7 @@ export default class SCRequestForm extends Component {
 
 	render() {
 		const { searchResults } = this.state;
+		
 		return (
 			<div>
 				<InputForm

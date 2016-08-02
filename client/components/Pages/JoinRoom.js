@@ -42,7 +42,7 @@ export default class JoinRoom extends Component {
 
 	render () {
 		return (
-			<div style={page}>
+			<div className='page' style={page}>
 				<div className='joinRoom' style={container}>
 					<button 
 						onClick={this.createRoom}

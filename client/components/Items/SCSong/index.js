@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 
-import { NO_IMAGE } from '../../constants'
+import { NO_IMAGE } from '../../../constants'
 import {
 	artistStyle, titleStyle,
 	artwork, songStyle, songInfo,
 } from './styles'
 
-import SuggestedBy from '../SuggestedBy'
+import SuggestedBy from '../../SuggestedBy'
 
 @Radium
 export default class Song extends Component {

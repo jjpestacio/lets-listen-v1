@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ItemList from '../ItemList'
+import ItemList from '../../ItemList'
 
 export default class SearchResults extends Component {
 	constructor(props) {
@@ -8,13 +8,13 @@ export default class SearchResults extends Component {
 	}
 
 	render() {
-		const { addSong, songs } = this.props;
+		const { addVideo, videos } = this.props;
 
 		return (
-			<div id='search-results'>
+			<div className='searchResults'>
 				<ItemList 
-					items={songs} 
-					onClick={song => addSong(song)} />
+					items={videos} 
+					onClick={video => addVideo(video)} />
 			</div>
 		)
 	}

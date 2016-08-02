@@ -29,6 +29,7 @@ class InputForm extends Component {
 	handleTextChange(e) {
 		const { maxLength } = this.props;
 
+		// Don't let user type more characters than maxLength
 		if (maxLength && e.target.value.length > maxLength) 
 			return;
 

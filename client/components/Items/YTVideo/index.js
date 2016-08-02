@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 
-import { NO_IMAGE } from '../../constants'
+import { NO_IMAGE } from '../../../constants'
 import {
 	channelTitleStyle, titleStyle,
 	artwork, videoStyle, videoInfo,
 } from './styles'
 
-import SuggestedBy from '../SuggestedBy'
+import SuggestedBy from '../../SuggestedBy'
 
 @Radium
 export default class Video extends Component {

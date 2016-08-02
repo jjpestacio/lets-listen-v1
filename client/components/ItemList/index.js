@@ -1,28 +1,48 @@
 import React, { Component } from 'react'
 
-import { SC_SONG, YT_USER } from '../../constants'
+import { SC_SONG, YT_VIDEO } from '../../constants'
 
-import Song from '../Song'
-import Video from '../Video'
+import Song from '../Items/SCSong'
+import Video from '../Items/YTVideo'
 
 export default class ItemList extends Component {
 	constructor(props) {
 		super(props);
+
+		this.getItem = this.getItem.bind(this);
+	}
+
+	getItem(item, i) {
+		const { onClick } = this.props;
+
+		switch (item.type) {
+			case SC_SONG: {
+				return (
+					<Song key={i} 
+						onClick={() => onClick(item)}
+						song={item} />
+				)
+			}
+
+			case YT_VIDEO: {
+				return (
+					<Video key={i} 
+						onClick={() => onClick(item)}
+						video={item} />
+				)
+			}
+
+			default:
+				return null;
+		}
 	}
 
 	render() {
-		const { items, onClick } = this.props;
-
+		const { items } = this.props;
+		
 		return (
 			<div className='itemList'>
-				{ items.map(( item, i ) => item.type === SC_SONG
-					? <Song key={i} 
-						onClick={() => onClick(item)}
-						song={item} />
-					: <Video key={i} 
-						onClick={() => onClick(item)}
-						video={item} />
-				)}	
+				{ items.map(( item, i ) => this.getItem(item, i) )}
 			</div>			
 		) 
 	}

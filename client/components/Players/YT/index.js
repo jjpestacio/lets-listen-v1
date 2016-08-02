@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import Radium from 'radium'
 import YouTubePlayer from 'youtube-player'
 
-import { YT_ENDED, YT_PAUSED, YT_PLAYING } from '../../constants'
-import { changeTime, nextQueue } from '../../actions'
+import { YT_ENDED, YT_PAUSED, YT_PLAYING } from '../../../constants'
+import { changeTime, nextQueue } from '../../../actions'
 import { button, buttons, controller } from './styles'
 
 @connect(

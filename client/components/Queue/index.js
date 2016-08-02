@@ -23,7 +23,7 @@ export default class Queue extends Component {
 			<div>
 				<ItemList 
 					items={queue.slice(1, queue.length)} 
-					onClick={song => openLink(song.permalink_url)} />
+					onClick={item => openLink(item.permalink_url)} />
 			</div>
 		)
 	}

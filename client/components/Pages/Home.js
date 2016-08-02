@@ -4,19 +4,18 @@ import { browserHistory } from 'react-router'
 import Radium from 'radium'
 
 import { col, roomId, row } from './styles'
-import { timer } from '../Timer/styles'
-import { SC_SONG, SEC, MS, YT_VIDEO } from '../../constants'
+import { SC_SONG, YT_VIDEO } from '../../constants'
 import { openLink } from '../../functions'
 
 import Queue from '../Queue'
-import SCPlayer from '../SCPlayer'
-import SCRequestForm from '../SCRequestForm'
-import Song from '../Song'
+import SCPlayer from '../Players/SC'
+import SCRequestForm from '../RequestForms/SC'
+import Song from '../Items/SCSong'
 // import Timer from '../Timer'
 import UserList from '../UserList'
-import Video from '../Video'
-import YTPlayer from '../YTPlayer'
-import YTRequestForm from '../YTRequestForm'
+import Video from '../Items/YTVideo'
+import YTPlayer from '../Players/YT'
+import YTRequestForm from '../RequestForms/YT'
 
 @connect(
 	state => ({
@@ -37,15 +36,15 @@ export default class Home extends Component {
 	componentDidMount() {
 		const { socket } = this.props;
 
-		setInterval(() => {
-			console.log('ping')
-		}, 53000);
+		// For Heroku apps, connections auto idle at 55 secs
+		setInterval(() => console.log('ping'), 53000);
 	}
 
 	getPlayer(current) {
 		const { DJ, socket, user } = this.props;
 
-		if (!current) return null;
+		if (!current) 
+			return null;
 
 		switch (current.type) {
 			case SC_SONG: {
@@ -89,11 +88,11 @@ export default class Home extends Component {
 						<span style={roomId}>{room}</span>
 					</div>
 				</div>
-				<div style={row}>
+				<div className='body' style={row}>
 					<div className='userList' style={col}>
 						<UserList socket={socket} />
 					</div>
-					<div style={col}>
+					<div className='player-search' style={col}>
 						<div id='player' style={row}>
 							<div id='iframe' />
 							{this.getPlayer(current)}	
@@ -103,10 +102,9 @@ export default class Home extends Component {
 							<YTRequestForm socket={socket} />
 						</div>
 					</div>
-					<div style={col}>
+					<div className='queue' style={col}>
 						<Queue />
 					</div>
-
 				</div>
 			</div>
 		)
