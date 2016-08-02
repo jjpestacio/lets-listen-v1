@@ -24,32 +24,32 @@ node ./server/index.js
 
 ## Features
 
-*Separate rooms
-*Specify a DJ for the room who actually plays the music through his/her device
-*Queue music from both SoundClound and YouTube
-*Everyone in the room is in sync; everyone can see what is currently playing and what songs have been added to the queue
+* Separate rooms
+* Specify a DJ for the room who actually plays the music through his/her device
+* Queue music from both SoundClound and YouTube
+* Everyone in the room is in sync; everyone can see what is currently playing and what songs have been added to the queue
 
 I decided not to use a database for this project since the data does not need to be persisted.
 
 ## Known Bugs
 
-*Users using mobile get disconnected after some time if they are not on the web page
+* Users using mobile get disconnected after some time if they are not on the web page
 
 ## Notes
 
 I created this web app as a project to practice ReactJS, Socket.io, and web development in general. I am still a newbie in web development, so my code has anti-patterns, some of which I am aware of and some of which I am not. For those that I am aware of, I will try to fix in my future projects. I want to learn and do better.
 
 Things I would like to do for future projects:
-***Better code reuse**
-- request forms could have been made to be reused
-- a lot of styles were redundant (although I am not too sure on the best practices for inlining styles in React ... are they supposed to go with their respective components, all in one folder, etc.)
-***Server side rendering**
-***Use webpack dev server**
-- webpack's watch feature and nodemon were a great help for this project though
+1. **Better code reuse**
+..* request forms could have been made to be reused
+..* a lot of styles were redundant (although I am not too sure on the best practices for inlining styles in React ... are they supposed to go with their respective components, all in one folder, etc.)
+2. ***Server side rendering**
+3. ***Use webpack dev server**
+..* webpack's watch feature and nodemon were a great help for this project though
 ***Keep bootstrap in mind**
-- I didn't think about styling until much later in the project and I realized that bootstrap would have been a big help in laying my page out in a grid
-***Spend more time designing and learn some design principles**
-- I spent time initially designing how the project would look, what features I wanted, and what components I'd have, but I did not even consider UX, scalability, or anything else. I believe I would have benefited from spending more time designing the project initially. I want to learn design principles so that I know what I should focus on while designing and how to properly design.
+..* I didn't think about styling until much later in the project and I realized that bootstrap would have been a big help in laying my page out in a grid
+4. ***Spend more time designing and learn some design principles**
+..* I spent time initially designing how the project would look, what features I wanted, and what components I'd have, but I did not even consider UX, scalability, or anything else. I believe I would have benefited from spending more time designing the project initially. I want to learn design principles so that I know what I should focus on while designing and how to properly design.
 
 ## Contributing
 
