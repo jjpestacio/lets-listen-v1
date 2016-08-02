@@ -40,16 +40,21 @@ I decided not to use a database for this project since the data does not need to
 I created this web app as a project to practice ReactJS, Socket.io, and web development in general. I am still a newbie in web development, so my code has anti-patterns, some of which I am aware of and some of which I am not. For those that I am aware of, I will try to fix in my future projects. I want to learn and do better.
 
 Things I would like to do for future projects:
+
 1. **Better code reuse**
-..* request forms could have been made to be reused
-..* a lot of styles were redundant (although I am not too sure on the best practices for inlining styles in React ... are they supposed to go with their respective components, all in one folder, etc.)
-2. ***Server side rendering**
-3. ***Use webpack dev server**
-..* webpack's watch feature and nodemon were a great help for this project though
-***Keep bootstrap in mind**
-..* I didn't think about styling until much later in the project and I realized that bootstrap would have been a big help in laying my page out in a grid
-4. ***Spend more time designing and learn some design principles**
-..* I spent time initially designing how the project would look, what features I wanted, and what components I'd have, but I did not even consider UX, scalability, or anything else. I believe I would have benefited from spending more time designing the project initially. I want to learn design principles so that I know what I should focus on while designing and how to properly design.
+  * request forms could have been made to be reused
+  * a lot of styles were redundant (although I am not too sure on the best practices for inlining styles in React ... are they supposed to go with their respective components, all in one folder, etc.)
+
+2. **Server side rendering**
+
+3. **Use webpack dev server**
+  * webpack's watch feature and nodemon were a great help for this project though
+
+4. **Keep bootstrap in mind**
+  * I didn't think about styling until much later in the project and I realized that bootstrap would have been a big help in laying my page out in a grid
+
+5. **Spend more time designing and learn some design principles**
+  * I spent time initially designing how the project would look, what features I wanted, and what components I'd have, but I did not even consider UX, scalability, or anything else. I believe I would have benefited from spending more time designing the project initially. I want to learn design principles so that I know what I should focus on while designing and how to properly design.
 
 ## Contributing
 
