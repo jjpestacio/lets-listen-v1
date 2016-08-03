@@ -1,6 +1,6 @@
 module.exports = {
 	button: {
-		backgroundColor: '#ff5500',
+		backgroundColor: '#ffcc00',
 		border: 'none',
 		borderRadius: '4px',
 		color: '#ffffff',
@@ -55,15 +55,11 @@ module.exports = {
 		width: '100vw',
 	},
 	roomId: {
-		color: '#ff5500',
+		color: '#ffcc00',
 		display: 'inline-block',
 		fontSize: '1.5em',
-		opacity: '0.8',
 		textShadow: '0.5px 0.5px 0.5px rgba(0,0,0,0.3)',
 		verticalAlign: 'top',
-		':hover': {
-			opacity: '1'
-		}
 	},
 	row: {
 		// border: '2px red solid',

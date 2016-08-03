@@ -1,6 +1,6 @@
 module.exports = {
 	button: {
-		backgroundColor: '#ff5500',
+		backgroundColor: '#ffcc00',
 		border: 'none',
 		borderRadius: '4px',
 		color: '#ffffff',
@@ -15,7 +15,7 @@ module.exports = {
 		}
 	},
 	DJ: {
-		color: '#ff5500',
+		color: '#ffcc00',
 		fontWeight: 'bold',
 	},
 	// userList: {
@@ -27,13 +27,9 @@ module.exports = {
 		display: 'inline-block',
 		float: 'left',
 		fontSize: '1.5em',
-		opacity: '0.8',
 		position: 'relative',
 		textShadow: '0.5px 0.5px 0.5px rgba(0,0,0,0.3)',
 		verticalAlign: 'top',
 		width: '65%',
-		':hover': {
-			opacity: '1'
-		}
 	}
 }

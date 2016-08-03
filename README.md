@@ -27,6 +27,11 @@ node ./server/index.js
 
 I decided not to use a database for this project since the data does not need to be persisted.
 
+## To Add
+
+* Better styling and media queries
+* When setting a new DJ, resume the song from the current position (currently the song resets)
+
 ## Known Bugs
 
 * Users using mobile get disconnected after some time if they are not on the web page
