@@ -15,7 +15,7 @@ module.exports = {
 		}
 	},
 	DJ: {
-		color: '#ffcc00',
+		color: '#ffa31a',
 		fontWeight: 'bold',
 	},
 	// userList: {

@@ -25,8 +25,8 @@ export default class YTPlayer extends Component {
 		this.next = this.next.bind(this);
 
 		this.player = YouTubePlayer('iframe', {
-			height: '100%',
-			width: '100%',
+			height: '95%',
+			width: '95%',
 			videoId: this.props.video.id.videoId,
 			playerVars: {
 				autoplay: 1,

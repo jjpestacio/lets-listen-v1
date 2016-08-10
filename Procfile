@@ -1,1 +1,2 @@
-web: node server/index.js
+web: nodemon server/index.js
+build: webpack --watch

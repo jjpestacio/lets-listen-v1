@@ -5,7 +5,7 @@ var webpack = require('webpack')
 
 module.exports = {
 	entry: [
-		'./client',
+		'./client'
 	],
 	output: {
 		path: __dirname + '/dist/',

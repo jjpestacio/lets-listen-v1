@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
 import Radium from 'radium'
 
-import { col, roomId, row } from './styles'
+import { col, roomId, row, userListContainer, home } from './styles'
 import { SC_SONG, YT_VIDEO } from '../../constants'
 import { openLink } from '../../functions'
 
@@ -82,14 +82,14 @@ export default class Home extends Component {
 		const current = queue[0];
 
 		return(
-			<div className='page'>
+			<div className='home' style={home}>
 				<div className='navbar' style={[row, { margin: '0 0 1vw 0' }]}>
-					<div style={col}>
-						<span style={roomId}>{room}</span>
+					<div style={roomId}>
+						<span>{room}</span>
 					</div>
 				</div>
 				<div className='body' style={row}>
-					<div className='userList' style={col}>
+					<div className='userList' style={[ col, userListContainer ]}>
 						<UserList socket={socket} />
 					</div>
 					<div className='player-search' style={col}>

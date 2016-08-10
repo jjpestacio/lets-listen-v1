@@ -6,11 +6,11 @@ module.exports = {
 		color: '#ffffff',
 		display:'inline-block',
 		fontSize: '1em',
-		height: '3.4vw',
+		maxHeight: '75px',
 		opacity: '0.8',
-		padding: '1vw',
+		padding: '5px',
 		verticalAlign: 'top',
-		width: '8vw',
+		width: '25%',
 		':hover': {
 			opacity: '1'
 		}
@@ -21,10 +21,10 @@ module.exports = {
 		borderRadius: '4px 0 0 4px',
 		color: '#a2a2a2',
 		fontSize: '1em',
-		height: '2.2vw',
+		// height: '2.2vw',
 		marginBottom: '1vw',
-		padding: '0.6vw',
-		width: '20vw',
+		padding: '5px',
+		width: '65%',
 		verticalAlign: 'top',
 		':focus': {
 			backgroundColor: 'white',

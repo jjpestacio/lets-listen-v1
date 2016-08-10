@@ -6,10 +6,11 @@ module.exports = {
 	},
 	artwork: {
 		display: 'inline-block',
-		height: '8vw',
-		padding: '0.8vw',
+		height: '90%',
+		padding: '6px',
 		verticalAlign: 'top',
-		width: '8vw',
+		width: '25%',
+		position: 'relative'
 	},
 	titleStyle: {
 		color: '#525f59',
@@ -18,20 +19,22 @@ module.exports = {
 	},
 	songStyle: {
 		background: '#FCFCFC',
-		border: '1px solid #ffccb3',
+		border: '4px solid #ffccb3',
 		borderRadius: '4px',
 		display: 'block',
 		margin: '6px 0',
 		opacity: '0.8',
-		width: '29vw',
+		maxHeight: '90px',
+		width: '95%',
 		':hover': {
-			border: '2px solid #ffccb3',
+			border: '4px solid #ff7733',
 			opacity: '1',
 		}
 	},
 	songInfo: {
 		display: 'inline-block',
-		padding: '0.8vw',
-		width: '17vw',
+		padding: '6px',
+		width: '65%',
+		position: 'relative',
 	},
 }

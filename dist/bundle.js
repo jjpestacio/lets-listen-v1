@@ -40711,16 +40711,16 @@
 
 				return _react2.default.createElement(
 					'div',
-					{ className: 'page' },
+					{ className: 'home', style: _styles.home },
 					_react2.default.createElement(
 						'div',
 						{ className: 'navbar', style: [_styles.row, { margin: '0 0 1vw 0' }] },
 						_react2.default.createElement(
 							'div',
-							{ style: _styles.col },
+							{ style: _styles.roomId },
 							_react2.default.createElement(
 								'span',
-								{ style: _styles.roomId },
+								null,
 								room
 							)
 						)
@@ -40730,7 +40730,7 @@
 						{ className: 'body', style: _styles.row },
 						_react2.default.createElement(
 							'div',
-							{ className: 'userList', style: _styles.col },
+							{ className: 'userList', style: [_styles.col, _styles.userListContainer] },
 							_react2.default.createElement(_UserList2.default, { socket: socket })
 						),
 						_react2.default.createElement(
@@ -40771,7 +40771,7 @@
 
 	module.exports = {
 		button: {
-			backgroundColor: '#ffcc00',
+			backgroundColor: '#ffa31a',
 			border: 'none',
 			borderRadius: '4px',
 			color: '#ffffff',
@@ -40779,7 +40779,7 @@
 			fontSize: '1em',
 			height: '3.6vw',
 			// margin: '0 auto',
-			opacity: '0.8',
+			opacity: '0.9',
 			padding: '1vw',
 			width: '20vw',
 			verticalAlign: 'top',
@@ -40793,9 +40793,20 @@
 		col: {
 			// border: '2px red solid',
 			display: 'inline-block',
-			margin: '0 1vw',
 			verticalAlign: 'top',
-			width: '30vw'
+			width: '31vw',
+			maxWidth: '340px',
+			maxHeight: '700px',
+			height: '80vh',
+			padding: '10px',
+			overflowY: 'auto'
+		},
+		home: {
+			width: '100%',
+			height: '100%',
+			maxWidth: '1050px',
+			maxHeight: '750px',
+			margin: 'auto'
 		},
 		input: {
 			backgroundColor: '#e5e5e5',
@@ -40825,8 +40836,8 @@
 			width: '100vw'
 		},
 		roomId: {
-			color: '#ffcc00',
-			display: 'inline-block',
+			color: '#ffa31a',
+			display: 'block',
 			fontSize: '1.5em',
 			textShadow: '0.5px 0.5px 0.5px rgba(0,0,0,0.3)',
 			verticalAlign: 'top'
@@ -40838,8 +40849,11 @@
 			position: 'relative',
 			width: '100%'
 		},
-		'@media (max-width: 20em)': {
-			backgroundColor: 'black'
+		userListContainer: {
+			borderRadius: '6px',
+			width: '20vw',
+			maxWidth: '230px',
+			marginRight: '1vw'
 		}
 	};
 
@@ -41135,10 +41149,11 @@
 		},
 		artwork: {
 			display: 'inline-block',
-			height: '8vw',
-			padding: '0.8vw',
+			height: '90%',
+			padding: '6px',
 			verticalAlign: 'top',
-			width: '8vw'
+			width: '25%',
+			position: 'relative'
 		},
 		titleStyle: {
 			color: '#525f59',
@@ -41147,21 +41162,23 @@
 		},
 		songStyle: {
 			background: '#FCFCFC',
-			border: '1px solid #ffccb3',
+			border: '4px solid #ffccb3',
 			borderRadius: '4px',
 			display: 'block',
 			margin: '6px 0',
 			opacity: '0.8',
-			width: '29vw',
+			maxHeight: '90px',
+			width: '95%',
 			':hover': {
-				border: '2px solid #ffccb3',
+				border: '4px solid #ff7733',
 				opacity: '1'
 			}
 		},
 		songInfo: {
 			display: 'inline-block',
-			padding: '0.8vw',
-			width: '17vw'
+			padding: '6px',
+			width: '65%',
+			position: 'relative'
 		}
 	};
 
@@ -41332,17 +41349,19 @@
 	'use strict';
 
 	module.exports = {
-		artwork: {
-			display: 'inline-block',
-			height: '8vw',
-			padding: '0.8vw',
-			verticalAlign: 'top',
-			width: '8vw'
-		},
 		channelTitleStyle: {
 			color: '#afa8c2',
 			display: 'block',
 			fontSize: '0.75em'
+		},
+		artwork: {
+			display: 'inline-block',
+			height: '100%',
+			minHeight: '70px',
+			padding: '6px',
+			verticalAlign: 'top',
+			width: '25%',
+			position: 'relative'
 		},
 		titleStyle: {
 			color: '#525f59',
@@ -41351,21 +41370,23 @@
 		},
 		videoStyle: {
 			background: '#FCFCFC',
-			border: '1px solid #f6d5d5',
+			border: '4px solid #F97979',
 			borderRadius: '4px',
 			display: 'block',
 			margin: '6px 0',
 			opacity: '0.8',
-			width: '29vw',
+			height: '100%',
+			width: '95%',
 			':hover': {
-				border: '2px solid #f6d5d5',
+				border: '4px solid #d74c4b',
 				opacity: '1'
 			}
 		},
 		videoInfo: {
 			display: 'inline-block',
-			padding: '0.8vw',
-			width: '17vw'
+			padding: '6px',
+			width: '65%',
+			position: 'relative'
 		}
 	};
 
@@ -41572,7 +41593,7 @@
 			fontSize: '1em',
 			opacity: '0.8',
 			padding: '6px 12px',
-			width: '8vw',
+			width: '25%',
 			':hover': {
 				opacity: '1'
 			}
@@ -41583,7 +41604,7 @@
 		controller: {
 			display: 'block',
 			marginBottom: '1vw',
-			width: '28vw'
+			width: '100%'
 		}
 	};
 
@@ -41756,11 +41777,11 @@
 			color: '#ffffff',
 			display: 'inline-block',
 			fontSize: '1em',
-			height: '3.4vw',
+			maxHeight: '75px',
 			opacity: '0.8',
-			padding: '1vw',
+			padding: '5px',
 			verticalAlign: 'top',
-			width: '8vw',
+			width: '25%',
 			':hover': {
 				opacity: '1'
 			}
@@ -41771,10 +41792,10 @@
 			borderRadius: '4px 0 0 4px',
 			color: '#a2a2a2',
 			fontSize: '1em',
-			height: '2.2vw',
+			// height: '2.2vw',
 			marginBottom: '1vw',
-			padding: '0.6vw',
-			width: '20vw',
+			padding: '5px',
+			width: '65%',
 			verticalAlign: 'top',
 			':focus': {
 				backgroundColor: 'white',
@@ -42182,7 +42203,7 @@
 			}
 		},
 		DJ: {
-			color: '#ffcc00',
+			color: '#ffa31a',
 			fontWeight: 'bold'
 		},
 		// userList: {
@@ -42270,8 +42291,8 @@
 			_this.next = _this.next.bind(_this);
 
 			_this.player = (0, _youtubePlayer2.default)('iframe', {
-				height: '100%',
-				width: '100%',
+				height: '95%',
+				width: '95%',
 				videoId: _this.props.video.id.videoId,
 				playerVars: {
 					autoplay: 1,
@@ -52104,7 +52125,7 @@
 			fontSize: '1em',
 			opacity: '0.8',
 			padding: '6px 12px',
-			width: '8vw',
+			width: '25%',
 			':hover': {
 				opacity: '1'
 			}
@@ -52115,7 +52136,7 @@
 		controller: {
 			display: 'block',
 			margin: '1vw',
-			width: '28vw'
+			width: '100%'
 		}
 	};
 
@@ -52279,11 +52300,11 @@
 			color: '#ffffff',
 			display: 'inline-block',
 			fontSize: '1em',
-			height: '3.4vw',
+			maxHeight: '75px',
 			opacity: '0.8',
-			padding: '1vw',
-			width: '8vw',
+			padding: '5px',
 			verticalAlign: 'top',
+			width: '25%',
 			':hover': {
 				opacity: '1'
 			}
@@ -52294,9 +52315,10 @@
 			borderRadius: '4px 0 0 4px',
 			color: '#a2a2a2',
 			fontSize: '1em',
-			height: '2.2vw',
-			padding: '0.6vw',
-			width: '20vw',
+			// height: '2.2vw',
+			marginBottom: '1vw',
+			padding: '5px',
+			width: '65%',
 			verticalAlign: 'top',
 			':focus': {
 				backgroundColor: 'white',

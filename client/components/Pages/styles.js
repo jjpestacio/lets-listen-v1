@@ -1,6 +1,6 @@
 module.exports = {
 	button: {
-		backgroundColor: '#ffcc00',
+		backgroundColor: '#ffa31a',
 		border: 'none',
 		borderRadius: '4px',
 		color: '#ffffff',
@@ -8,7 +8,7 @@ module.exports = {
 		fontSize: '1em',
 		height: '3.6vw',
 		// margin: '0 auto',
-		opacity: '0.8',
+		opacity: '0.9',
 		padding: '1vw',
 		width: '20vw',
 		verticalAlign: 'top',
@@ -23,9 +23,20 @@ module.exports = {
 	col: {
 		// border: '2px red solid',
 		display: 'inline-block',
-		margin: '0 1vw',
 		verticalAlign: 'top',
-		width: '30vw',
+		width: '31vw',
+		maxWidth: '340px',
+		maxHeight: '700px',
+		height: '80vh',
+		padding: '10px',
+		overflowY: 'auto'
+	},
+	home: {
+		width: '100%',
+		height: '100%',
+		maxWidth: '1050px',
+		maxHeight: '750px',
+		margin: 'auto'
 	},
 	input: {
 		backgroundColor: '#e5e5e5',
@@ -55,8 +66,8 @@ module.exports = {
 		width: '100vw',
 	},
 	roomId: {
-		color: '#ffcc00',
-		display: 'inline-block',
+		color: '#ffa31a',
+		display: 'block',
 		fontSize: '1.5em',
 		textShadow: '0.5px 0.5px 0.5px rgba(0,0,0,0.3)',
 		verticalAlign: 'top',
@@ -68,7 +79,10 @@ module.exports = {
 		position: 'relative',
 		width: '100%',
 	},
-	'@media (max-width: 20em)': {
-		backgroundColor: 'black'
+	userListContainer: {
+		borderRadius: '6px',
+		width: '20vw', 
+		maxWidth: '230px',
+		marginRight: '1vw',
 	}
 }

@@ -8,7 +8,7 @@ module.exports = {
 		fontSize: '1em',
 		opacity: '0.8',
 		padding: '6px 12px',
-		width: '8vw',
+		width: '25%',
 		':hover': {
 			opacity: '1'
 		}
@@ -19,6 +19,6 @@ module.exports = {
 	controller: {
 		display: 'block',
 		marginBottom: '1vw',
-		width: '28vw',
+		width: '100%',
 	},
 }
