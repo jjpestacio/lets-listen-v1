@@ -1,4 +1,6 @@
-# Who's Djing?
+# Let's Listen
+
+** Let's Listen v2 is under development and will be releasing soon. Let's Listen v2 will feature server side Redux stores for each room to keep users in sync. V2 will also fix page refreshes during the same session will allow users to reconnect to their rooms with their same identities. Google access tokens will be utilized so that the YouTube Data API limit won't be reached. Also look forward for a better design that is also mobile friendly!
 
 Have you ever been in a situation where you're listening to music with friends? I bet you have a ton of times! This web app allows you to jam to music with friends with ease. No more walking over to your friend's phone/laptop to play a song you want to play and no more pressure for the designated DJ. 
 
@@ -6,13 +8,13 @@ Create a room and have your friends join. Then queue music to be played from eit
 
 ## Usage
 
-[Here's a live demo!](http://whosdjing.herokuapp.com/)
+[Here's a live demo!](http://letslisten.herokuapp.com/)
 
 If you would like to try the application out on your own: 
 
 ```javascript
-git clone https://github.com/jjpestacio/whos-djing.git
-cd whos-djing
+git clone https://github.com/jjpestacio/lets-listen.git
+cd lets-listen
 npm install
 webpack
 node ./server/index.js
